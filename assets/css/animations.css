@@ -1,0 +1,153 @@
+/* ===========================================================
+            THEBLUECRAFTT CYBER GLASS ANIMATIONS
+=========================================================== */
+
+.gradient-text {
+    background-size: 200% auto;
+    animation: gradientFlow 6s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+
+    100% {
+        background-position: 0% center;
+    }
+}
+
+.float-animation {
+    animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.glow-effect {
+    animation: neonPulse 3s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 229, 255, .25);
+    }
+
+    50% {
+        box-shadow: 0 0 55px rgba(0, 229, 255, .55);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgba(0, 229, 255, .25);
+    }
+}
+
+.hero-btn-primary::after,
+.nav-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .3), transparent);
+    transform: skewX(-25deg);
+    transition: .8s;
+}
+
+.hero-btn-primary:hover::after,
+.nav-btn:hover::after {
+    left: 140%;
+}
+
+.project-card:hover,
+.service-card:hover,
+.experience-card:hover,
+.skill-card:hover,
+.info-card:hover {
+    animation: cardEnergy 1.5s ease;
+}
+
+@keyframes cardEnergy {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.fade-up {
+    animation: fadeUp .8s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cursor-glow {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    background: radial-gradient(circle, rgba(0, 229, 255, .6), transparent 70%);
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+    transition: opacity .3s;
+}
+
+#stars span,
+#stars2 span,
+#stars3 span {
+    animation: starTwinkle 4s infinite ease-in-out;
+}
+
+@keyframes starTwinkle {
+
+    0%,
+    100% {
+        opacity: .3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.6);
+    }
+}
+
+@media (max-width: 768px) {
+    .cursor-glow {
+        display: none;
+    }
+}

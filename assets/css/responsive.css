@@ -1,0 +1,44 @@
+/* ===========================================================
+        THEBLUECRAFTT CYBER GLASS RESPONSIVE SYSTEM
+=========================================================== */
+
+/* ================= LARGE SCREENS ================= */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .section-title {
+        font-size: 2.7rem;
+    }
+
+    .container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+/* ================= TABLETS ================= */
+@media (max-width: 992px) {
+
+    /* Already covered in style.css – added here for completeness */
+    .navbar .nav-link.active {
+        background: rgba(6, 246, 255, .12) !important;
+        border-radius: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-shadow: 0 0 15px rgba(6, 246, 255, .35), inset 0 0 15px rgba(6, 246, 255, .15);
+    }
+
+    .navbar .nav-link.active::after {
+        bottom: -3px;
+        width: 60%;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+    .navbar .nav-link.active::after {
+        width: 50%;
+    }
+}
